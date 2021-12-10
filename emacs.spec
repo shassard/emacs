@@ -51,7 +51,9 @@ BuildRequires: librsvg2-devel
 #BuildRequires: m17n-lib-devel
 #BuildRequires: libotf-devel
 BuildRequires: libselinux-devel
+%if 0%{?el8}
 BuildRequires: GConf2-devel
+%endif
 BuildRequires: alsa-lib-devel
 BuildRequires: gpm-devel
 BuildRequires: liblockfile-devel
