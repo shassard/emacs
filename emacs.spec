@@ -6,7 +6,7 @@ Summary:       GNU Emacs text editor
 Name:          emacs
 Epoch:         1
 Version:       27.2
-Release:       1%{?dist}
+Release:       2%{?dist}
 License:       GPLv3+ and CC0-1.0
 URL:           http://www.gnu.org/software/emacs/
 Group:         Applications/Editors
@@ -26,6 +26,7 @@ Patch2:        emacs-system-crypto-policies.patch
 
 BuildRequires: autoconf
 BuildRequires: make
+BuildRequires: gcc
 BuildRequires: atk-devel
 BuildRequires: cairo-devel
 BuildRequires: freetype-devel
@@ -419,6 +420,9 @@ fi
 %dir %{_datadir}/emacs/site-lisp/site-start.d
 
 %changelog
+* Thu Dec 23 2021 Stephen Hassard <steve@hassard.net> - 2:27.2-2
+- add gcc for centos stream 9
+
 * Mon Sep 10 2018 Jan Synáček <jsynacek@redhat.com> - 1:26.1-5
 - review annocheck distro flag failures (#1624109)
 
